@@ -6,6 +6,9 @@
 
 # Your code goes here
 
+for x in range(5, 54, 7):
+	print(x)
+
 """
 python3 20loop.py
 5
