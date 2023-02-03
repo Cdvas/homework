@@ -24,8 +24,6 @@ for i in range(dna_length):
 		dna += random.choice("GC")
 		
 print(len(dna), AT/dna_length, dna)
-#AT_frac = AT_content/(2 * dna_length)
-#print(len(dna), AT_frac, dna)
 
 """
 python3 25atseq.py
