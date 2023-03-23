@@ -33,11 +33,10 @@ hydrophobics = ['']
 def hah(seq, window, threshold):#grab the kd values in each window
 	for i in range(len(seq) - window + 1):
 		kd = 0
-		hydrophobe = False
 		frame = seq[i:i+window]
 		if 'P' in frame: #doesn't process windows w/ P
 			continue
-		if name in hydrophobics:
+		if name in hydrophobics: #to not print the same protein again
 			continue
 		for aa in frame: 
 			idx = aas.find(aa)
@@ -46,9 +45,7 @@ def hah(seq, window, threshold):#grab the kd values in each window
 			print(name)
 			hydrophobics.append(name)
 			break
-
 #kd(frame) #keep track of when you exceed 2.5 or 2.0. Don't use return command bc that will end the loop after 1 iteration - Lilith
-		
 for name, seq in mcb185.read_fasta(sys.argv[1]): #make 1st 30aa and rest separately processed
 	roi1 = seq[:30]
 	roi2 = seq[30:]
