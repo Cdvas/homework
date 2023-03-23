@@ -27,10 +27,6 @@ import sys
 values = (4.5, 4.2, 3.8, 2.8, 2.5, 1.9, 1.8, -0.4, -0.7, -0.8, -0.9, -1.3, -1.6, -3.2, -3.5, -3.5, -3.5, -3.5, -3.9, -4.5) #A list of values from K-D wiki list
 
 aas = 'IVLFCMAGTSWYPHEQDNKR'
-
-def kd(data):
-	if hydrophobe == True: 
-		print(name)
 		
 hydrophobics = ['']
 		
@@ -50,9 +46,8 @@ def hah(seq, window, threshold):#grab the kd values in each window
 			print(name)
 			hydrophobics.append(name)
 			break
-		
-		
-#		kd(frame) #keep track of when you exceed 2.5 or 2.0. Don't use return command bc that will end the loop after 1 iteration - Lilith
+
+#kd(frame) #keep track of when you exceed 2.5 or 2.0. Don't use return command bc that will end the loop after 1 iteration - Lilith
 		
 for name, seq in mcb185.read_fasta(sys.argv[1]): #make 1st 30aa and rest separately processed
 	roi1 = seq[:30]

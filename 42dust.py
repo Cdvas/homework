@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # 42dust.py
 
 # Write a program that performs entropy filtering on nucleotide fasta files
@@ -25,7 +27,7 @@ def entropy(probs):
 	return h
 
 def seq_entropy(seq):
-	p = [] #stores compasitions aka probabilities	
+	p = [] #stores compositions aka probabilities	
 	A = seq.count('A') / len(seq) #nt composition
 	T = seq.count('T') / len(seq)
 	C = seq.count('C') / len(seq)
@@ -44,7 +46,7 @@ for name, genome in mcb185.read_fasta(sys.argv[1]):
 	window = int((sys.argv[2]))
 	threshold = float((sys.argv[3]))
 	seq = genome
-	#Above this line processes h. Below edits seq based on h.
+
 	processing = list(seq) #puts sequence into a list for processing
 for i in range(len(seq) - window + 1): #process whole seq
 	frame = seq[i:i+window]

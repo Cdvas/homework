@@ -17,7 +17,7 @@ count = [0] * len(amino_acids)
 total = 0
 count2 = {'A': 0}
 count2['A'] += 1
-with gzip.open(sys.argv[1], 'rt') as aa: #appends aas to list
+with gzip.open(sys.argv[1], 'rt') as aa:
 	for line in aa.readlines():
 		if line[0] == '>': continue	#implicit else	
 		total += len(line) - 1 #a new line at the end is why -1
