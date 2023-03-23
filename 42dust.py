@@ -46,7 +46,6 @@ for name, genome in mcb185.read_fasta(sys.argv[1]):
 	window = int((sys.argv[2]))
 	threshold = float((sys.argv[3]))
 	seq = genome
-
 	processing = list(seq) #puts sequence into a list for processing
 for i in range(len(seq) - window + 1): #process whole seq
 	frame = seq[i:i+window]
